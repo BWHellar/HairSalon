@@ -1,0 +1,17 @@
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.csprojAssemblyReference.cache
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.csproj.CoreCompileInputs.cache
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.AssemblyInfoInputs.cache
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.AssemblyInfo.cs
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.Tests.deps.json
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.Tests.runtimeconfig.json
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.Tests.runtimeconfig.dev.json
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.Tests.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.Tests.pdb
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/bin/Debug/netcoreapp2.1/HairSalon.pdb
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.csproj.CopyComplete
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.dll
+/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp2.1/HairSalon.Tests.pdb
