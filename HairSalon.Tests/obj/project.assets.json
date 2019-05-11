@@ -13380,8 +13380,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "HairSalon >= 1.0.0",
-      "MSTest.TestAdapter >= 1.1.11",
-      "MSTest.TestFramework >= 1.1.11",
+      "MSTest.TestAdapter >= 1.1.1",
+      "MSTest.TestFramework >= 1.1.1",
       "Microsoft.AspNetCore.App",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -13432,11 +13432,11 @@
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
-            "version": "[1.1.11, )"
+            "version": "[1.1.1, )"
           },
           "MSTest.TestFramework": {
             "target": "Package",
-            "version": "[1.1.11, )"
+            "version": "[1.1.1, )"
           },
           "Microsoft.AspNetCore.App": {
             "target": "Package",
@@ -13468,6 +13468,26 @@
       "warningLevel": 1,
       "message": "Project dependency Microsoft.AspNetCore.App does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
       "libraryId": "Microsoft.AspNetCore.App",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "HairSalon.Tests depends on MSTest.TestAdapter (>= 1.1.1) but MSTest.TestAdapter 1.1.1 was not found. An approximate best match of MSTest.TestAdapter 1.1.11 was resolved.",
+      "libraryId": "MSTest.TestAdapter",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "HairSalon.Tests depends on MSTest.TestFramework (>= 1.1.1) but MSTest.TestFramework 1.1.1 was not found. An approximate best match of MSTest.TestFramework 1.1.11 was resolved.",
+      "libraryId": "MSTest.TestFramework",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]

@@ -1,22 +1,24 @@
-<div class="grid">
-  <div class="header">
-    <div class="home">
+
+@using HairSalon.Models
+
+<div>
+  <div>
+    <div>
       <p><a href="/">Home</a></p>
     </div>
       <h1>stylist</h1>
   </div>
 </div>
-<div class="aline">
-  @if (@Model.Count == 0)
-  {
-    <h3>No stylist have been added yet!</h3>
-  }
 
-  @foreach (var stylist in Model)
-  {
-    <h3><a href='/stylist/@stylist.GetStylistId()'>@stylist.GetStylistName()</a></h3>
-  }
-</div>
+@foreach(Stylist stylist in @Model)
+{
+<form action="stylist/" method="post"
+}
+
+
   <div class="back">
-    <p><a href='/stylist/new'>Add New stylist</a></p>
+  <form action="/stylist/new" method="post">
+    <label for="name">Add Stylist</label>
+    <input type="text" name="name"/>
+    <button type="submit">Add</button>
   </div>
