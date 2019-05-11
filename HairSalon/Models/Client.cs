@@ -7,23 +7,21 @@ namespace HairSalon.Models
   {
 
     private string _name;
+    public string Name { get {return _name;} }
+
     private int _id;
-    private string _description;
+    public int Id { get { return _id;} set { _id = value;} }
 
-    public Client (string description)
-    {
-      _description = description;
-    }
+    private int _stylistId;
+    public int StylistId { get { return _stylistId;} set { _stylistId = value;} }
 
-    public string GetName()
-    {
-      return _name;
-    }
-    public int GetId()
-    {
-      return _id;
-    }
 
+    public Client (string name, int id = 0, int stylistId = 0)
+    {
+      _name = name;
+      _id = id;
+      _stylistid = stylistId;
+    }
     public static void ClearAll()
     {
       MySqlConnection conn = DB.Connection();
@@ -68,10 +66,14 @@ namespace HairSalon.Models
       }
       return allClients;
     }
-    public static Client Find(int Id)
+    public overrise bool Equals(object obj)
     {
-      Client dummyClient = new Client("dummy item");
-      return dummyClient;
+      if(!(obj is Client)) return false;
+      else
+      {
+        Client client = (Client) object
+        return client.name == this.Name && client.Id == this.Id;
+      }
     }
   }
 }

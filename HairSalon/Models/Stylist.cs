@@ -4,26 +4,34 @@ namespace HairSalon.Models
 {
   public class Stylist
   {
-    private static List<Stylist> _instances = new List<Stylist>{};
     private string _name;
-    private int _stylistId;
-    private List<Client> _clients;
+    public string Name { get { return _name;} }
 
-    public Stylist (string stylistName)
+    private int _id;
+    public string Name { get { return _id;} }
+
+    public Stylist (string name, int id = 0)
     {
-      _name = stylistName;
-      _instances.Add(this);
-      _stylistId = _instances.Count;
-      _clients = new List<Client>{};
+      _name = name;
+      _id = id;
     }
-    public string GetStylistName()
+
+    public void Save()
     {
-      return _name;
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"INSERT INTO stylist (name) VALUES (@this.Name);";
+      MySqlParameter thisName = new MySqlParameter ("@thisName", this.Name);
+      cmd.Parameters.Add(thisName);
+
+      cmd.ExecuteNonQuery();
+      this._id = (int) cmd.LastInsertedId;
+
+      conn.Close();
+      if(conn!=null) {conn.Dispose();}
     }
-    public int GetStylistId()
-    {
-      return _stylistId;
-    }
+
     public static void ClearAll()
     {
       _instances.Clear();
@@ -32,9 +40,12 @@ namespace HairSalon.Models
     {
       return _instances;
     }
-    public static Stylist Find(int searchStylistId)
+    public static Stylist Find(int _searchId)
     {
-      return _instances [searchStylistId-1];
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      MySQlCommand cmd = conn.CreateCommand() as MySqlCommand;
     }
     public List<Client> GetClient()
     {
