@@ -17,6 +17,33 @@ namespace HairSalon.Models
       _id = id;
     }
 
+    public static List<Stylist> GetStylist()
+    {
+      List<Stylist> showAllStylist = new List <Stylist>{};
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM stylist;";
+
+
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      while(rdr.Read())
+      {
+        int id = rdr.GetInt32(0);
+        string name = rdr.GetString(1);
+
+        Stylist stylist = new Stylist(name, id);
+        showAllStylist.Add(stylist);
+      }
+
+      conn.Close();
+      if(conn!=null)
+      {
+        conn.Dispose();
+      }
+      return showAllStylist;
+    }
     public void Save()
     {
       MySqlConnection conn = DB.Connection();
@@ -134,32 +161,5 @@ namespace HairSalon.Models
       return allClient;
     }
 
-    public static List<Stylist> GetStylist()
-    {
-      List<Stylist> showAllStylist = new List<Stylist>{};
-      MySqlConnection conn = DB.Connection();
-      conn.Open();
-
-      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"SELECT * FROM stylist;";
-
-
-      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-      while(rdr.Read())
-      {
-        int id = rdr.GetInt32(0);
-        string name = rdr.GetString(1);
-
-        Stylist stylist = new Stylist(name, id);
-        showAllStylist.Add(stylist);
-      }
-
-      conn.Close();
-      if(conn!=null)
-      {
-        conn.Dispose();
-      }
-      return showAllStylist;
-    }
   }
 }

@@ -10,7 +10,10 @@
   </div>
 </div>
 
-
+@foreach (Stylist stylist in Model)
+{
+  <h3><a href='/stylist/@stylist.Id'>@stylist.Name</a></h3>
+}
 
   <div class="back">
   <form action="/stylist/new" method="post">
