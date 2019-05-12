@@ -70,7 +70,7 @@ namespace HairSalon.Models
       conn.Open();
 
       MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"DELETE FROM stylist; DELETE FROM clients;";
+      cmd.CommandText = @"DELETE FROM stylist; DELETE FROM client;";
       cmd.ExecuteNonQuery();
 
       conn.Close();
@@ -139,7 +139,7 @@ namespace HairSalon.Models
       conn.Open();
 
       MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"SELECT * FROM clients WHERE stylistId = @thisId;";
+      cmd.CommandText = @"SELECT * FROM client WHERE stylistId = @thisId;";
       MySqlParameter thisId = new MySqlParameter("@thisId", this._id);
       cmd.Parameters.Add(thisId);
 

@@ -14,10 +14,6 @@
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/HairSalon.TagHelpers.input.cache
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/HairSalon.TagHelpers.output.cache
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/HairSalon.RazorCoreGenerate.cache
-/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/Razor/Views/Clients/DeleteAll.g.cshtml.cs
-/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/Razor/Views/Clients/Index.g.cshtml.cs
-/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/Razor/Views/Clients/New.g.cshtml.cs
-/Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/Razor/Views/Clients/Show.g.cshtml.cs
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/HairSalon.RazorTargetAssemblyInfo.cache
 /Users/bwhellar/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.1/HairSalon.RazorTargetAssemblyInfo.cs
