@@ -19,14 +19,29 @@ namespace HairSalon.Test
     }
 
     [TestMethod]
-    public void SavesToDataBase_Stylist()
+    public void Stylist_InstanceOfStylist_Stylist()
     {
-      Stylist stylist = new Stylist("Test");
+      string name = "Some Guy";
+      Stylist stylist = new Stylist(name);
+      Assert.AreEqual(typeof(Stylist), stylist.GetType());
+    }
+
+    [TestMethod]
+    public void Equals_ReturnsTrueIfNameSame_Stylist()
+    {
+      Stylist stylistOne = new Stylist("Bobo", 1);
+      Stylist stylistTwo = new Stylist("Bobo", 1);
+      Assert.AreEqual(stylistOne, stylistTwo);
+    }
+
+    [TestMethod]
+    public void Save_SavesToDatabase_Stylist()
+    {
+      Stylist stylist = new Stylist ("Bobo");
       stylist.Save();
-
       List<Stylist> result = Stylist.GetStylist();
-
-      Assert.AreEqual(1, result.Count);
+      List<Stylist> list = new List<Stylist>{stylist};
+      CollectionAssert.AreEqual(list, result);
     }
   }
 }
