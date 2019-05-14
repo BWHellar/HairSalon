@@ -15,8 +15,6 @@ namespace HairSalon.Controllers
       return View(showAllStylist);
     }
 
-
-
     [HttpPost("/stylist/{id}/delete")]
     public ActionResult Delete(int id)
     {
@@ -25,6 +23,7 @@ namespace HairSalon.Controllers
 
         return RedirectToAction("Index");
     }
+    
     [HttpPost("/stylist/{id}")]
     public ActionResult Create(string clientName, int id)
     {
