@@ -16,7 +16,16 @@ namespace HairSalon.Controllers
     }
 
 
-    [HttpPost("/stylist/{id}/client/new")]
+
+    [HttpPost("/stylist/{id}/delete")]
+    public ActionResult Delete(int id)
+    {
+        Stylist stylist = Stylist.Find(id);
+        stylist.Delete();
+
+        return RedirectToAction("Index");
+    }
+    [HttpPost("/stylist/{id}")]
     public ActionResult Create(string clientName, int id)
     {
       Stylist stylist = Stylist.Find(id);
@@ -43,7 +52,5 @@ namespace HairSalon.Controllers
 
       return RedirectToAction("Index");
     }
-
-
   }
 }

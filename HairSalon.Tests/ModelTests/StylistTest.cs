@@ -17,31 +17,41 @@ namespace HairSalon.Test
     {
         DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=brendan_hellar_test;";
     }
-
     [TestMethod]
-    public void Stylist_InstanceOfStylist_Stylist()
+    public void Save_SaveStylistToDatabase_Stylist()
     {
-      string name = "Some Guy";
-      Stylist stylist = new Stylist(name);
-      Assert.AreEqual(typeof(Stylist), stylist.GetType());
-    }
-
-    [TestMethod]
-    public void Equals_ReturnsTrueIfNameSame_Stylist()
-    {
-      Stylist stylistOne = new Stylist("Bobo", 1);
-      Stylist stylistTwo = new Stylist("Bobo", 1);
-      Assert.AreEqual(stylistOne, stylistTwo);
-    }
-
-    [TestMethod]
-    public void Save_SavesToDatabase_Stylist()
-    {
-      Stylist stylist = new Stylist ("Bobo");
+      Stylist stylist = new Stylist("Jen");
       stylist.Save();
+
       List<Stylist> result = Stylist.GetStylist();
-      List<Stylist> list = new List<Stylist>{stylist};
-      CollectionAssert.AreEqual(list, result);
+
+      Assert.AreEqual(1, result.Count);
+    }
+    [TestMethod]
+    public void AddClient_AddClientToDatabase_Client()
+    {
+      Stylist stylist = new Stylist("Ben");
+      stylist.Save();
+
+      Client client = new Client("Jen");
+      stylist.AddClient(client);
+      List<Client> clients = stylist.GetClients();
+
+      Assert.AreEqual(1, clients.Count);
+    }
+
+    [TestMethod]
+    public void Delete_DeleteStylist_Stylist()
+    {
+      Stylist stylist = new Stylist("Ten");
+      stylist.Save();
+
+      stylist.Delete();
+
+      List<Stylist> allStylists = Stylist.GetStylist();
+      int result = allStylists.Count;
+
+      Assert.AreEqual(0, result);
     }
   }
 }

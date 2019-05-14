@@ -12,12 +12,18 @@
 
 @foreach (Stylist stylist in Model)
 {
+<form action="/stylist/@stylist.Id/delete" method="post">
   <h3><a href='/stylist/@stylist.Id'>@stylist.Name</a></h3>
+  <button type="submit" value="@stylist.Id">Remove</button>
+</form>
 }
 
-  <div class="back">
   <form action="/stylist/new" method="post">
     <label for="name">Add Stylist</label>
     <input type="text" name="name"/>
     <button type="submit">Add</button>
-  </div>
+  </form>
+
+<form action="/" method="get">
+  <button type="submit">Home</button>
+</form>

@@ -5,7 +5,7 @@
 <h3>@Model.Name</h3>
 
 <div>
-  <form action="stylist/@Model.Id/new" method="post">
+  <form action="@Model.Id" method="post">
   <label for="clientName">Add Client</label>
   <input type="text" name="clientName"/>
   <button type="submit">Add</button>
@@ -16,5 +16,11 @@
 <h2>Current Clients<h2>
 @foreach (Client client in @Model.GetClients())
 {
-  <h3><a href=""/stylist/@Model.Id">@client.Name</a></h3>
+
+  <h3>@client.Name</h3>
+
 }
+
+<form action="/" method="get">
+  <button type="submit">Home</button>
+</form>

@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clients`
+-- Table structure for table `client`
 --
 
-CREATE TABLE `clients` (
+CREATE TABLE `client` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `stylistId` int(11) NOT NULL
@@ -41,9 +41,9 @@ ALTER TABLE `clients`
 --
 
 --
--- AUTO_INCREMENT for table `clients`
+-- AUTO_INCREMENT for table `client`
 --
-ALTER TABLE `clients`
+ALTER TABLE `client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
   -- --------------------------------------------------------
